@@ -1,0 +1,7 @@
+{
+    "name": "SERLER - Production",
+    "mail":{
+        "host":"prod-mail.server"
+    },
+    "mongoDbConnection": "mongodb://localhost/SERLER"
+}

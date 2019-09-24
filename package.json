@@ -1,0 +1,43 @@
+{
+  "name": "serlerapi",
+  "version": "1.0.0",
+  "description": "Backend for serler app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node buildScripts/srcServer.js",
+    "test": "mocha --reporter progress buildScripts/mochaSetup.js \"controllers/**/*.spec.js\"",
+    "test:watch": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SERLER-group5/serler-backend.git"
+  },
+  "author": "group5 team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SERLER-group5/serler-backend/issues"
+  },
+  "homepage": "https://github.com/SERLER-group5/serler-backend#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "config": "^3.2.2",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fawn": "^2.1.5",
+    "helmet": "^3.21.0",
+    "joi": "^14.3.1",
+    "joi-objectid": "^2.0.0",
+    "joi-password-complexity": "^3.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.7.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.2"
+  }
+}

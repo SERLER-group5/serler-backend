@@ -1,0 +1,7 @@
+{
+    "mail":{
+        "password": "serler_pasword"
+    },
+    "jwtPrivateKey": "mySuperJWTKey",
+    "db": "mongoDbConnection"
+}
