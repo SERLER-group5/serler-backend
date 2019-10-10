@@ -4,7 +4,7 @@
   "description": "Backend for serler app",
   "main": "index.js",
   "scripts": {
-    "start": "node buildScripts/srcServer.js",
+    "start": "nodemon buildScripts/srcServer.js",
     "test": "mocha --reporter progress buildScripts/mochaSetup.js \"controllers/**/*.spec.js\"",
     "test:watch": "npm run test -- --watch"
   },

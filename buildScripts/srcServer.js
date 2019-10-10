@@ -17,6 +17,7 @@ const usersRoute = require('../routes/users');
 const rolesRoute = require('../routes/roles');
 const gendersRoute = require('../routes/genders');
 const authRoute = require('../routes/auth');
+const articleRoute = require('../routes/article');
 
 
 
@@ -56,5 +57,6 @@ app.use('/api/genders', gendersRoute);
 app.use('/api/users', usersRoute);
 app.use('/api/roles', rolesRoute);
 app.use('/api/auth', authRoute);
+app.use('/paper', articleRoute);
 
 app.listen(8080);
