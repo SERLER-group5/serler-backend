@@ -28,6 +28,7 @@ router.get('/:id',[auth,admin], async(req, res)=>{
 });
 
 router.post('/', async(req, res)=>{
+    console.log('regiser user info: ', req.body);
     const {error} = validate(req.body);
     if(error) return res.status(400).send(error.details[0].message);
 
@@ -53,6 +54,7 @@ router.post('/', async(req, res)=>{
 
     // const token = jwt.sign({_id: user._id}, config.get('jwtPrivateKey'));
     const token = user.generateToken();
+    console.log('user api token is: %s', token);
     res.header('x-auth-token', token)
     .header('access-control-expose-headers','x-auth-token')
     .send(_.pick(user,['_id','name', 'email']));

@@ -29,6 +29,7 @@ if (!config.get('mongoDbConnection')) {
   process.exit(1);
 }
 
+console.log('mongo connection: ', config.get('mongoDbConnection'));
 mongoose.connect(config.get('mongoDbConnection'), {
     useNewUrlParser: true,
     useFindAndModify: false,
