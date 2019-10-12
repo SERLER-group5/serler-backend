@@ -17,6 +17,7 @@ const usersRoute = require('../routes/users');
 const rolesRoute = require('../routes/roles');
 const gendersRoute = require('../routes/genders');
 const authRoute = require('../routes/auth');
+const statusRoute = require('../routes/status');
 
 
 
@@ -29,6 +30,7 @@ if (!config.get('mongoDbConnection')) {
   process.exit(1);
 }
 
+console.log('mongo connection: ', config.get('mongoDbConnection'));
 mongoose.connect(config.get('mongoDbConnection'), {
     useNewUrlParser: true,
     useFindAndModify: false,
@@ -56,5 +58,6 @@ app.use('/api/genders', gendersRoute);
 app.use('/api/users', usersRoute);
 app.use('/api/roles', rolesRoute);
 app.use('/api/auth', authRoute);
+app.use('/api/status', statusRoute);
 
 app.listen(8080);
