@@ -1,43 +1,42 @@
 const mongoose = require('mongoose');
 const Joi = require('joi');
 
-const {statusSchema} = require('./status');
-
 const submitterSchema = new mongoose.Schema({
-    name: {type: String, required:true,  minlength:5, maxlength:255, trim:true},
-    submittedDate: {type:Date, required:true, default:Date.now}
+    name: {type: mongoose.Types.ObjectId, ref: "User"},
+    submittedDate: {type: Date, default: Date, get: v => moment(v).format('MMMM Do YYYY, h:mm:ss a')}
 });
 
 const analystSchema = new mongoose.Schema({
-    name: {type: String, required:true,  minlength:5, maxlength:255, trim:true},
-    analysedDate: Date
+    name: {type: mongoose.Types.ObjectId, ref: "User"},
+    analysedDate: {type: Date, default: Date, get: v => moment(v).format('MMMM Do YYYY, h:mm:ss a')}
 });
 
 const moderatorSchema = new mongoose.Schema({
-    name: {type: String, required:true,  minlength:5, maxlength:255, trim:true},
-    moderatedDate: Date
+    name: {type: mongoose.Types.ObjectId, ref: "User"},
+    moderatedDate: {type: Date, default: Date, get: v => moment(v).format('MMMM Do YYYY, h:mm:ss a')}
 });
 
 const rejectorSchema = new mongoose.Schema({
-    name: {type: String, required:true,  minlength:5, maxlength:255, trim:true},
-    rejectedDate: Date
+    name: {type: mongoose.Types.ObjectId, ref: "User"},
+    rejectedDate: {type: Date, default: Date, get: v => moment(v).format('MMMM Do YYYY, h:mm:ss a')}
 });
 
 const articleSchema = new mongoose.Schema({
-    name: {type:String, required:true, trim:true, minlength:5, maxlength:255},
+    title: {type:String, required:true, minlength:5, maxlength:255},
+    content: {type:String, trim:true, default: ''},
     submitter: {type:submitterSchema, required:true},
     tags: [ {type:String, trim:true, minlength:2, maxlength:255} ],
-    status: {type: statusSchema},
+    status: {type: mongoose.Types.ObjectId, ref: "Status"},
     moderator: {type: moderatorSchema},
     analyst: {type: analystSchema},
     rejector: {type: rejectorSchema},
-    noOfLikes: {type:Number,required:true, default:0, min:0}
+    createdDate: {type: Date, default: Date, get: v => moment(v).format('MMMM Do YYYY, h:mm:ss a')},
+    updatedDate: {type: Date, default: Date, get: v => moment(v).format('MMMM Do YYYY, h:mm:ss a')}
 });
 
 function validateArticle(article){
     const schema = {
-        name: Joi.string().min(3).required(),
-        submitterId: Joi.objectId().required(),
+        title: Joi.string().min(3).required(),
         tags: Joi.array()
     };
     return Joi.validate(article, schema);
