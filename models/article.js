@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 const Joi = require('joi');
 const Schema = mongoose.Schema;
@@ -58,3 +59,4 @@ function validateArticle(article) {
     */
 
     module.exports = mongoose.model("Article", articleSchema)
+
