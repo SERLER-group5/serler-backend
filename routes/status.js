@@ -5,7 +5,11 @@ const auth = require('../middleware/authenticator');
 const admin = require('../middleware/admin');
 
 /**
+<<<<<<< HEAD
  * status router
+=======
+ * article router
+>>>>>>> d9a67db5e6e00c5ef511027dc70b0c08d56f83a9
  */
 router.get('/', async(req, res)=>{
     const statuses = await Status.find();
@@ -23,6 +27,7 @@ router.get('/:id', async(req, res)=>{
 });
 
 router.post('/', async(req, res)=>{
+<<<<<<< HEAD
     console.log('saved info is: ', req.body);
     const {error} = validate(req.body);
     if(error) {
@@ -36,6 +41,13 @@ router.post('/', async(req, res)=>{
             msg: 'Status has existed!'
         });
     }
+=======
+    const {error} = validate(req.body);
+    if(error) return res.status(400).send(error.details[0].message);
+
+    const exsitedStatus = await Status.findOne({name: req.body.name});
+    if(exsitedStatus) return res.status(400).send('Status has existed!');
+>>>>>>> d9a67db5e6e00c5ef511027dc70b0c08d56f83a9
 
     const status = new Status({
         name: req.body.name
