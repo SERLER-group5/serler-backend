@@ -22,7 +22,6 @@ const articlesRoute = require('../routes/article');
 
 
 
-
 if (!config.get('jwtPrivateKey')) {
   console.error('FATAL ERROR: jwtPrivateKey not defined');
   process.exit(1);
@@ -62,4 +61,5 @@ app.use('/api/roles', rolesRoute);
 app.use('/api/auth', authRoute);
 app.use('/api/status', statusRoute);
 app.use('/api/articles', articlesRoute);
+
 app.listen(8080);

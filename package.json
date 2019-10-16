@@ -4,8 +4,9 @@
   "description": "Backend for serler app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon buildScripts/srcServer.js",
-    "test": "mocha --reporter progress buildScripts/mochaSetup.js \"controllers/**/*.spec.js\"",
+    "start": "node buildScripts/srcServer.js",
+    "test": "mocha \"test/**/*.test.js\"",
+    "test:reporter": "mocha --recursive --reporter mochawesome --require babel-core/register \"test/**/*.test.js\"",
     "test:watch": "npm run test -- --watch"
   },
   "repository": {
@@ -20,7 +21,8 @@
   "homepage": "https://github.com/SERLER-group5/serler-backend#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.2.0"
+    "mocha": "^6.2.0",
+    "mochawesome": "^4.1.0"
   },
   "dependencies": {
     "bcrypt": "^3.0.6",
@@ -39,6 +41,9 @@
     "moment": "^2.24.0",
     "mongoose": "^5.7.1",
     "morgan": "^1.9.1",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.2",
+    "mocha": "3.0.2",
+    "supertest": "3.0.0",
+    "chai": "4.1.2"
   }
 }
