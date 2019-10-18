@@ -94,11 +94,13 @@ router.post('/', async(req, res)=>{
 
     const sumitter = await User.findById(req.body.submitter);
     if (!sumitter) {
+        console.log('Not found the submitter of the current article.');
         return res.status(400).send('Not found the submitter of the current article.');
     }
 
     const submittedStatus = await Status.findOne({name: 'submitted'});
     if (!submittedStatus) {
+        console.log('Has no status data for article to choose');
         return res.status(400).send('Has no status data for article to choose');
     }
 

@@ -2,9 +2,8 @@
  * in this file, it would test all the api of the status module
  */
 const request = require('supertest');
-// const app = require('../buildScripts/srcServer');
-// your request address
-const app = "http://localhost:8080";
+const hostname = require('../config');
+const app = hostname.address;
 
 describe('test all the api about status', () => {
 

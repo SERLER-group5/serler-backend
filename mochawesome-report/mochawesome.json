@@ -1,0 +1,874 @@
+{
+  "stats": {
+    "suites": 13,
+    "tests": 16,
+    "passes": 16,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-10-17T06:46:32.277Z",
+    "end": "2019-10-17T06:46:32.480Z",
+    "duration": 203,
+    "testsRegistered": 16,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a45f21ee-242a-4a94-9d93-f741439d928c",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "15bf826e-9ea1-4583-bbfa-874e3ecaad4d",
+          "title": "test all the api of the article module",
+          "fullFile": "/Users/tgzhsz/Desktop/serler/serler-backend/test/article.test.js",
+          "file": "/test/article.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook",
+              "fullTitle": "test all the api of the article module \"before all\" hook",
+              "timedOut": false,
+              "duration": 15,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request(app).get('/api/users').set(ContentType, ApplicationJson).end((err, res) => {\n    allUsers = res.body;\n});\nrequest(app).get('/api/status').set(ContentType, ApplicationJson).end((err, res) => {\n    allStatus = res.body;\n});\nrequest(app).get('/api/articles').set(ContentType, ApplicationJson).expect(200).end((err, res) => {\n    allArticles = res.body;\n});\ndone();",
+              "err": {},
+              "uuid": "49ee4096-706c-48df-8810-17372d00bbee",
+              "parentUUID": "15bf826e-9ea1-4583-bbfa-874e3ecaad4d",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test the api of querying all the articles",
+              "fullTitle": "test all the api of the article module test the api of querying all the articles",
+              "timedOut": false,
+              "duration": 26,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request(app).get('/api/articles').set(ContentType, ApplicationJson).expect(200).end((err, res) => {\n    done();\n});",
+              "err": {},
+              "uuid": "b5f75cfd-b54c-4e99-a333-e78c3afa2ee7",
+              "parentUUID": "15bf826e-9ea1-4583-bbfa-874e3ecaad4d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test the condition query api of the article module",
+              "fullTitle": "test all the api of the article module test the condition query api of the article module",
+              "timedOut": false,
+              "duration": 7,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let randomNum = Math.round(Math.random() * 100);\nrequest(app).post('/api/article/condition/query').set(ContentType, ApplicationJson).send({ title: 'test title' + randomNum, tags: 'test tags' + randomNum }).expect(200).end((err, res) => {\n    console.log(res.body);\n    done();\n});",
+              "err": {},
+              "uuid": "6f702c6c-2337-4e27-9993-dea2cf48ec30",
+              "parentUUID": "15bf826e-9ea1-4583-bbfa-874e3ecaad4d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "ff58158f-9993-4423-bf65-5eb58d8a4715",
+              "title": "query single article by article id",
+              "fullFile": "/Users/tgzhsz/Desktop/serler/serler-backend/test/article.test.js",
+              "file": "/test/article.test.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before all\" hook",
+                  "fullTitle": "test all the api of the article module query single article by article id \"before all\" hook",
+                  "timedOut": false,
+                  "duration": 1,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "if (allArticles.length > 0) {\n    queryId = allArticles[allArticles.length - 1]._id;\n}\ndone();",
+                  "err": {},
+                  "uuid": "d2410934-d57b-4985-a30f-92d9717f4a29",
+                  "parentUUID": "ff58158f-9993-4423-bf65-5eb58d8a4715",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "test querying single article by id",
+                  "fullTitle": "test all the api of the article module query single article by article id test querying single article by id",
+                  "timedOut": false,
+                  "duration": 11,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "request(app).get('/api/articles/' + queryId).set(ContentType, ApplicationJson).expect(200).end((err, res) => {\n    done();\n});",
+                  "err": {},
+                  "uuid": "c561adbe-86f8-45e3-9bd6-fb2e91166b4c",
+                  "parentUUID": "ff58158f-9993-4423-bf65-5eb58d8a4715",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c561adbe-86f8-45e3-9bd6-fb2e91166b4c"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 11,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "1d3e01f3-9923-43b3-8495-1a29e74eeb6d",
+              "title": "add a new article",
+              "fullFile": "/Users/tgzhsz/Desktop/serler/serler-backend/test/article.test.js",
+              "file": "/test/article.test.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before all\" hook",
+                  "fullTitle": "test all the api of the article module add a new article \"before all\" hook",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "/**\n * firstly, randomly query a status id as the status of the article\n * to be added\n */\nif (allStatus.length > 0) {\n    let index = Math.round(Math.random() * (allStatus.length - 1));\n    status = allStatus[index]._id;\n}\n/**\n * firstly, randomly query a user id as the submitter of the article\n * to be added\n */\nif (allUsers.length > 0) {\n    let index = Math.round(Math.random() * (allUsers.length - 1));\n    submitter = allUsers[index]._id;\n}\ndone();",
+                  "err": {},
+                  "uuid": "50d00d1b-d1b3-4da4-a6bf-79c8dc5151fc",
+                  "parentUUID": "1d3e01f3-9923-43b3-8495-1a29e74eeb6d",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "test add api of article module",
+                  "fullTitle": "test all the api of the article module add a new article test add api of article module",
+                  "timedOut": false,
+                  "duration": 13,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "let randomNum = Math.round(Math.random() * 100);\nrequest(app).post('/api/articles').set(ContentType, ApplicationJson).send({\n    title: \"test title\" + randomNum,\n    tags: \"test tags\" + randomNum,\n    content: \"this is test content\" + randomNum,\n    status: status,\n    submitter: submitter\n}).expect(200).end((err, res) => {\n    done();\n});\nconsole.log('submitter: ', submitter);\nconsole.log('status: ', status);",
+                  "err": {},
+                  "uuid": "1595972f-bd37-4c0f-8e4b-cca412c56d3a",
+                  "parentUUID": "1d3e01f3-9923-43b3-8495-1a29e74eeb6d",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "1595972f-bd37-4c0f-8e4b-cca412c56d3a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 13,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "6e7bd3f6-b662-4478-9472-15f42f293139",
+              "title": "update api test of article module",
+              "fullFile": "/Users/tgzhsz/Desktop/serler/serler-backend/test/article.test.js",
+              "file": "/test/article.test.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before all\" hook",
+                  "fullTitle": "test all the api of the article module update api test of article module \"before all\" hook",
+                  "timedOut": false,
+                  "duration": 1,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "if (allArticles.length > 0) {\n    updatedId = allArticles[allArticles.length - 1]._id;\n}\ndone();",
+                  "err": {},
+                  "uuid": "4c0b5c94-3219-44b2-897f-221161096cbc",
+                  "parentUUID": "6e7bd3f6-b662-4478-9472-15f42f293139",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "delete api test",
+                  "fullTitle": "test all the api of the article module update api test of article module delete api test",
+                  "timedOut": false,
+                  "duration": 9,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "let randomNum = Math.round(Math.random() * 50);\nrequest(app).put('/api/articles/' + updatedId).set(ContentType, ApplicationJson).send({\n    title: 'update title' + randomNum,\n    content: 'updated content' + randomNum,\n    tags: 'updated tags' + randomNum\n}).expect(200).end((err, res) => {\n    console.log('updated successfully...');\n    done();\n});",
+                  "err": {},
+                  "uuid": "38094171-80a4-48e1-ab83-e284e99631c2",
+                  "parentUUID": "6e7bd3f6-b662-4478-9472-15f42f293139",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "38094171-80a4-48e1-ab83-e284e99631c2"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 9,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "a8c18e1a-bf30-47bd-b383-082e57045598",
+              "title": "delete api test of article module",
+              "fullFile": "/Users/tgzhsz/Desktop/serler/serler-backend/test/article.test.js",
+              "file": "/test/article.test.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before all\" hook",
+                  "fullTitle": "test all the api of the article module delete api test of article module \"before all\" hook",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "if (allArticles.length > 0) {\n    deleteId = allArticles[allArticles.length - 1]._id;\n}\ndone();",
+                  "err": {},
+                  "uuid": "547f73a6-fb21-46f0-908c-e8c9de08998e",
+                  "parentUUID": "a8c18e1a-bf30-47bd-b383-082e57045598",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "delete api test",
+                  "fullTitle": "test all the api of the article module delete api test of article module delete api test",
+                  "timedOut": false,
+                  "duration": 7,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "request(app).delete('/api/articles/' + deleteId).set(ContentType, ApplicationJson).expect(200).end((err, res) => {\n    console.log('deleted successfully...');\n    done();\n});",
+                  "err": {},
+                  "uuid": "4ed0c60d-ab1d-4d73-be34-e930966b7d71",
+                  "parentUUID": "a8c18e1a-bf30-47bd-b383-082e57045598",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "4ed0c60d-ab1d-4d73-be34-e930966b7d71"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 7,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "b5f75cfd-b54c-4e99-a333-e78c3afa2ee7",
+            "6f702c6c-2337-4e27-9993-dea2cf48ec30"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 33,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "2d9de296-30ae-482a-9450-5869249009db",
+          "title": "test all the api of the roles module",
+          "fullFile": "/Users/tgzhsz/Desktop/serler/serler-backend/test/role.test.js",
+          "file": "/test/role.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook",
+              "fullTitle": "test all the api of the roles module \"before all\" hook",
+              "timedOut": false,
+              "duration": 7,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request(app).get('/api/roles').set('Content-Type', 'application/json').end((err, res) => {\n    allRoles = res.body;\n    console.log('all the roles length are: ', allRoles.length);\n    done();\n});",
+              "err": {},
+              "uuid": "b75e42b4-3004-4cdb-8a4d-f3cfdd13ddb3",
+              "parentUUID": "2d9de296-30ae-482a-9450-5869249009db",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test that query all the roles",
+              "fullTitle": "test all the api of the roles module test that query all the roles",
+              "timedOut": false,
+              "duration": 8,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request(app).get('/api/roles').set('Content-Type', 'application/json').expect(200).end((err, res) => {\n    done();\n});",
+              "err": {},
+              "uuid": "0e9028e7-6c19-4c93-b712-f7b06e1e1fce",
+              "parentUUID": "2d9de296-30ae-482a-9450-5869249009db",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test add api of role module",
+              "fullTitle": "test all the api of the roles module test add api of role module",
+              "timedOut": false,
+              "duration": 8,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// randomly generate a role name\nlet __name = 'testRole' + Math.round(Math.random() * 100);\nrequest(app).post('/api/roles/').set('Content-Type', 'application/json').send({ name: __name }).expect(200).end((err, res) => {\n    console.log('Add role successfully...');\n    done();\n});",
+              "err": {},
+              "uuid": "a442aa29-d284-4ac4-a668-f9b68d159a34",
+              "parentUUID": "2d9de296-30ae-482a-9450-5869249009db",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "07142721-49ad-49d8-9076-b8eea9a993a1",
+              "title": "test query single role api by id",
+              "fullFile": "/Users/tgzhsz/Desktop/serler/serler-backend/test/role.test.js",
+              "file": "/test/role.test.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before all\" hook",
+                  "fullTitle": "test all the api of the roles module test query single role api by id \"before all\" hook",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "if (allRoles.length > 0) {\n    queryId = allRoles[allRoles.length - 1]._id;\n}\ndone();",
+                  "err": {},
+                  "uuid": "a5ea2db9-38bc-4617-b11d-d95806f4f7e1",
+                  "parentUUID": "07142721-49ad-49d8-9076-b8eea9a993a1",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "test query api by id of the role module",
+                  "fullTitle": "test all the api of the roles module test query single role api by id test query api by id of the role module",
+                  "timedOut": false,
+                  "duration": 5,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "request(app).get('/api/roles/' + queryId).set('Content-Type', 'application/json').expect(200).end((err, res) => {\n    console.log('single query successfully..');\n    done();\n});",
+                  "err": {},
+                  "uuid": "b9911dec-7e1c-4d6d-9967-f67330862e63",
+                  "parentUUID": "07142721-49ad-49d8-9076-b8eea9a993a1",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "b9911dec-7e1c-4d6d-9967-f67330862e63"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 5,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "900c5571-7d1b-4959-8cb0-c08285102650",
+              "title": "test update api of role module",
+              "fullFile": "/Users/tgzhsz/Desktop/serler/serler-backend/test/role.test.js",
+              "file": "/test/role.test.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before all\" hook",
+                  "fullTitle": "test all the api of the roles module test update api of role module \"before all\" hook",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "/**\n * Firstly, query all the roles and choose the \n * last one as the updated target, get its id and \n * modify its name to 'mocha_role_test'\n */\nif (allRoles.length > 0) {\n    updatedId = allRoles[allRoles.length - 1]._id;\n}\ndone();",
+                  "err": {},
+                  "uuid": "9bf3dcb9-d8ad-4843-b83f-a8a8390b9c8d",
+                  "parentUUID": "900c5571-7d1b-4959-8cb0-c08285102650",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "test update api of role module",
+                  "fullTitle": "test all the api of the roles module test update api of role module test update api of role module",
+                  "timedOut": false,
+                  "duration": 5,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "request(app).put('/api/roles/' + updatedId).set('Content-Type', 'application/json').send({ name: 'mocha_role_test' }).expect(200).end((err, res) => {\n    console.log('Update role name successfully...');\n    done();\n});",
+                  "err": {},
+                  "uuid": "eeb980b4-23cc-44fd-b961-02b50a877917",
+                  "parentUUID": "900c5571-7d1b-4959-8cb0-c08285102650",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "eeb980b4-23cc-44fd-b961-02b50a877917"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 5,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "960c88f0-ef24-4924-a039-cd76704bf41b",
+              "title": "test delete api of role moduel",
+              "fullFile": "/Users/tgzhsz/Desktop/serler/serler-backend/test/role.test.js",
+              "file": "/test/role.test.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before all\" hook",
+                  "fullTitle": "test all the api of the roles module test delete api of role moduel \"before all\" hook",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "if (allRoles.length > 0) {\n    deletedId = allRoles[allRoles.length - 1]._id;\n}\ndone();",
+                  "err": {},
+                  "uuid": "9d5c64e9-8c21-41f7-9402-e0f36542b12a",
+                  "parentUUID": "960c88f0-ef24-4924-a039-cd76704bf41b",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "test the delete api of role module",
+                  "fullTitle": "test all the api of the roles module test delete api of role moduel test the delete api of role module",
+                  "timedOut": false,
+                  "duration": 2,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "request(app).delete('/api/roles/' + deletedId).set('Content-Type', 'application/json').expect(200).end((err, res) => {\n    console.log('Delete role successfully...');\n    done();\n});",
+                  "err": {},
+                  "uuid": "a8a1cf6f-1191-4210-840b-4011c2aa628f",
+                  "parentUUID": "960c88f0-ef24-4924-a039-cd76704bf41b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "a8a1cf6f-1191-4210-840b-4011c2aa628f"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "0e9028e7-6c19-4c93-b712-f7b06e1e1fce",
+            "a442aa29-d284-4ac4-a668-f9b68d159a34"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "b5fab7fd-ed10-4cba-a5b1-51af9db4fcef",
+          "title": "test all the api about status",
+          "fullFile": "/Users/tgzhsz/Desktop/serler/serler-backend/test/status.test.js",
+          "file": "/test/status.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook",
+              "fullTitle": "test all the api about status \"before all\" hook",
+              "timedOut": false,
+              "duration": 8,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request(app).get('/api/status').set('Content-Type', 'application/json').end((err, res) => {\n    allStatus = res.body;\n    console.log('all the status length are: ', allStatus.length);\n    done();\n});",
+              "err": {},
+              "uuid": "8f591202-8356-432c-aa19-20216f483a23",
+              "parentUUID": "b5fab7fd-ed10-4cba-a5b1-51af9db4fcef",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test query all status api of staus module",
+              "fullTitle": "test all the api about status test query all status api of staus module",
+              "timedOut": false,
+              "duration": 12,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request(app).get('/api/status/').set('Content-Type', 'application/json').expect(200).end((err, res) => {\n    console.info(res.body);\n    done();\n});",
+              "err": {},
+              "uuid": "46e8fd1e-fcf7-41b3-aa37-d4964b1efdc6",
+              "parentUUID": "b5fab7fd-ed10-4cba-a5b1-51af9db4fcef",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test add api of status module",
+              "fullTitle": "test all the api about status test add api of status module",
+              "timedOut": false,
+              "duration": 9,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// randomly generate a status name\nlet __name = 'test_name' + Math.round(Math.random() * 100);\nrequest(app).post('/api/status/').set('Content-Type', 'application/json').send({ name: __name }).expect(200).end((err, res) => {\n    // console.log(res.body);\n    done();\n});",
+              "err": {},
+              "uuid": "a292348c-3672-40aa-a263-ee253ab12400",
+              "parentUUID": "b5fab7fd-ed10-4cba-a5b1-51af9db4fcef",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "b190d8a4-eba7-46c0-9f0b-1ab18a67809b",
+              "title": "test query single status api by id",
+              "fullFile": "/Users/tgzhsz/Desktop/serler/serler-backend/test/status.test.js",
+              "file": "/test/status.test.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before all\" hook",
+                  "fullTitle": "test all the api about status test query single status api by id \"before all\" hook",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "if (allStatus.length > 0) {\n    queryId = allStatus[allStatus.length - 1]._id;\n}\ndone();",
+                  "err": {},
+                  "uuid": "88a2c739-03ac-46d7-a8dc-3f61cd09cf3c",
+                  "parentUUID": "b190d8a4-eba7-46c0-9f0b-1ab18a67809b",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "test query api by id of the status module",
+                  "fullTitle": "test all the api about status test query single status api by id test query api by id of the status module",
+                  "timedOut": false,
+                  "duration": 7,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "request(app).get('/api/status/' + queryId).set('Content-Type', 'application/json').expect(200).end((err, res) => {\n    console.log(res.body);\n    done();\n});",
+                  "err": {},
+                  "uuid": "5abeb83e-80d2-4246-86b8-d05d2f7a98a1",
+                  "parentUUID": "b190d8a4-eba7-46c0-9f0b-1ab18a67809b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5abeb83e-80d2-4246-86b8-d05d2f7a98a1"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 7,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "2b3df8c8-0a9a-4f69-880b-f7a4862004e4",
+              "title": "test update api of status module",
+              "fullFile": "/Users/tgzhsz/Desktop/serler/serler-backend/test/status.test.js",
+              "file": "/test/status.test.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before all\" hook",
+                  "fullTitle": "test all the api about status test update api of status module \"before all\" hook",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "/**\n * Firstly, query all the status and choose the \n * last one as the updated target, get its id and \n * modify its name to 'mocha_test'\n */\nif (allStatus.length > 0) {\n    updatedId = allStatus[allStatus.length - 1]._id;\n}\ndone();",
+                  "err": {},
+                  "uuid": "d885547b-480e-4f33-b5fa-cc521e6e8c13",
+                  "parentUUID": "2b3df8c8-0a9a-4f69-880b-f7a4862004e4",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "test update api of status module",
+                  "fullTitle": "test all the api about status test update api of status module test update api of status module",
+                  "timedOut": false,
+                  "duration": 6,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "request(app).put('/api/status/' + updatedId).set('Content-Type', 'application/json').send({ name: 'mocha_test' }).expect(200).end((err, res) => {\n    done();\n});\n// console.log('updated id is: ', updatedId);",
+                  "err": {},
+                  "uuid": "6ad516ef-7901-4f40-ba24-145624e1bc7a",
+                  "parentUUID": "2b3df8c8-0a9a-4f69-880b-f7a4862004e4",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "6ad516ef-7901-4f40-ba24-145624e1bc7a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 6,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "623179f2-8f18-4553-a638-288e9ae948fd",
+              "title": "test delete api of status moduel",
+              "fullFile": "/Users/tgzhsz/Desktop/serler/serler-backend/test/status.test.js",
+              "file": "/test/status.test.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before all\" hook",
+                  "fullTitle": "test all the api about status test delete api of status moduel \"before all\" hook",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "if (allStatus.length > 0) {\n    deletedId = allStatus[allStatus.length - 1]._id;\n}\ndone();",
+                  "err": {},
+                  "uuid": "23d2364b-06b8-4f20-830f-ae425c2fea4b",
+                  "parentUUID": "623179f2-8f18-4553-a638-288e9ae948fd",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "test the delete api of status module",
+                  "fullTitle": "test all the api about status test delete api of status moduel test the delete api of status module",
+                  "timedOut": false,
+                  "duration": 7,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "request(app).delete('/api/status/' + deletedId).set('Content-Type', 'application/json').expect(200).end((err, res) => {\n    done();\n});",
+                  "err": {},
+                  "uuid": "23118779-aabe-44e5-b6af-9916eae60caa",
+                  "parentUUID": "623179f2-8f18-4553-a638-288e9ae948fd",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "23118779-aabe-44e5-b6af-9916eae60caa"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 7,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "46e8fd1e-fcf7-41b3-aa37-d4964b1efdc6",
+            "a292348c-3672-40aa-a263-ee253ab12400"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "3.0.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {},
+      "version": "4.0.1"
+    }
+  }
+}
