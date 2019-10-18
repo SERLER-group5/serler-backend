@@ -1,0 +1,134 @@
+2019-10-16T02:03:33.964+1300 I -        [initandlisten] MongoDB starting : pid=1713 port=27017 dbpath=/Users/tgzhsz/mongodb/mongodb/data/db 64-bit host=Joshs-MacBook-Pro.local
+2019-10-16T02:03:33.964+1300 I -        [initandlisten] 
+2019-10-16T02:03:33.965+1300 I -        [initandlisten] ** NOTE: This is a development version (2.7.8) of MongoDB.
+2019-10-16T02:03:33.966+1300 I -        [initandlisten] **       Not recommended for production.
+2019-10-16T02:03:33.967+1300 I -        [initandlisten] 
+2019-10-16T02:03:33.967+1300 I -        [initandlisten] 
+2019-10-16T02:03:33.968+1300 I -        [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2019-10-16T02:03:33.969+1300 I -        [initandlisten] db version v2.7.8
+2019-10-16T02:03:33.969+1300 I -        [initandlisten] git version: 0e9cb3b20498b9f167afaff7a5c4a4d1da7e06a2
+2019-10-16T02:03:33.970+1300 I -        [initandlisten] build info: Darwin mci-osx108-8.build.10gen.cc 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2019-10-16T02:03:33.971+1300 I -        [initandlisten] allocator: system
+2019-10-16T02:03:33.971+1300 I -        [initandlisten] options: { config: "mongo.cfg", processManagement: { fork: true }, storage: { dbPath: "/Users/tgzhsz/mongodb/mongodb/data/db", directoryPerDB: true, journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Users/tgzhsz/mongodb/data/log/mongo.log" } }
+2019-10-16T02:03:33.972+1300 I STORAGE  [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/tgzhsz/mongodb/mongodb/data/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2019-10-16T02:03:33.972+1300 I COMMANDS [initandlisten] dbexit:  rc: 100
+2019-10-16T02:03:51.904+1300 I -        ***** SERVER RESTARTED *****
+2019-10-16T02:03:51.910+1300 I -        [initandlisten] MongoDB starting : pid=1716 port=27017 dbpath=/Users/tgzhsz/mongodb/mongodb/data/db 64-bit host=Joshs-MacBook-Pro.local
+2019-10-16T02:03:51.910+1300 I -        [initandlisten] 
+2019-10-16T02:03:51.910+1300 I -        [initandlisten] ** NOTE: This is a development version (2.7.8) of MongoDB.
+2019-10-16T02:03:51.910+1300 I -        [initandlisten] **       Not recommended for production.
+2019-10-16T02:03:51.910+1300 I -        [initandlisten] 
+2019-10-16T02:03:51.910+1300 I -        [initandlisten] 
+2019-10-16T02:03:51.910+1300 I -        [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2019-10-16T02:03:51.910+1300 I -        [initandlisten] db version v2.7.8
+2019-10-16T02:03:51.910+1300 I -        [initandlisten] git version: 0e9cb3b20498b9f167afaff7a5c4a4d1da7e06a2
+2019-10-16T02:03:51.910+1300 I -        [initandlisten] build info: Darwin mci-osx108-8.build.10gen.cc 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2019-10-16T02:03:51.910+1300 I -        [initandlisten] allocator: system
+2019-10-16T02:03:51.910+1300 I -        [initandlisten] options: { config: "mongo.cfg", storage: { dbPath: "/Users/tgzhsz/mongodb/mongodb/data/db", directoryPerDB: true, journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Users/tgzhsz/mongodb/data/log/mongo.log" } }
+2019-10-16T02:03:51.910+1300 I STORAGE  [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/tgzhsz/mongodb/mongodb/data/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2019-10-16T02:03:51.911+1300 I COMMANDS [initandlisten] dbexit:  rc: 100
+2019-10-16T02:04:12.756+1300 I -        ***** SERVER RESTARTED *****
+2019-10-16T02:04:12.763+1300 I -        [initandlisten] MongoDB starting : pid=1718 port=27017 dbpath=/Users/tgzhsz/mongodb/mongodb/data/db 64-bit host=Joshs-MacBook-Pro.local
+2019-10-16T02:04:12.763+1300 I -        [initandlisten] 
+2019-10-16T02:04:12.763+1300 I -        [initandlisten] ** NOTE: This is a development version (2.7.8) of MongoDB.
+2019-10-16T02:04:12.763+1300 I -        [initandlisten] **       Not recommended for production.
+2019-10-16T02:04:12.763+1300 I -        [initandlisten] 
+2019-10-16T02:04:12.763+1300 I -        [initandlisten] 
+2019-10-16T02:04:12.763+1300 I -        [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2019-10-16T02:04:12.763+1300 I -        [initandlisten] db version v2.7.8
+2019-10-16T02:04:12.763+1300 I -        [initandlisten] git version: 0e9cb3b20498b9f167afaff7a5c4a4d1da7e06a2
+2019-10-16T02:04:12.763+1300 I -        [initandlisten] build info: Darwin mci-osx108-8.build.10gen.cc 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2019-10-16T02:04:12.763+1300 I -        [initandlisten] allocator: system
+2019-10-16T02:04:12.763+1300 I -        [initandlisten] options: { config: "mongo.cfg", storage: { dbPath: "/Users/tgzhsz/mongodb/mongodb/data/db", directoryPerDB: true, journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Users/tgzhsz/mongodb/data/log/mongo.log" } }
+2019-10-16T02:04:12.763+1300 I STORAGE  [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/tgzhsz/mongodb/mongodb/data/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2019-10-16T02:04:12.763+1300 I COMMANDS [initandlisten] dbexit:  rc: 100
+2019-10-16T02:45:22.061+1300 I -        ***** SERVER RESTARTED *****
+2019-10-16T02:45:22.066+1300 I -        [initandlisten] MongoDB starting : pid=4952 port=27017 dbpath=/Users/tgzhsz/mongodb/mongodb/data/db 64-bit host=Joshs-MacBook-Pro.local
+2019-10-16T02:45:22.066+1300 I -        [initandlisten] 
+2019-10-16T02:45:22.066+1300 I -        [initandlisten] ** NOTE: This is a development version (2.7.8) of MongoDB.
+2019-10-16T02:45:22.066+1300 I -        [initandlisten] **       Not recommended for production.
+2019-10-16T02:45:22.066+1300 I -        [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2019-10-16T02:45:22.066+1300 I -        [initandlisten] 
+2019-10-16T02:45:22.066+1300 I -        [initandlisten] 
+2019-10-16T02:45:22.066+1300 I -        [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2019-10-16T02:45:22.066+1300 I -        [initandlisten] db version v2.7.8
+2019-10-16T02:45:22.066+1300 I -        [initandlisten] git version: 0e9cb3b20498b9f167afaff7a5c4a4d1da7e06a2
+2019-10-16T02:45:22.066+1300 I -        [initandlisten] build info: Darwin mci-osx108-8.build.10gen.cc 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2019-10-16T02:45:22.067+1300 I -        [initandlisten] allocator: system
+2019-10-16T02:45:22.067+1300 I -        [initandlisten] options: { config: "mongo.cfg", storage: { dbPath: "/Users/tgzhsz/mongodb/mongodb/data/db", directoryPerDB: true, journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Users/tgzhsz/mongodb/data/log/mongo.log" } }
+2019-10-16T02:45:22.067+1300 I STORAGE  [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/tgzhsz/mongodb/mongodb/data/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2019-10-16T02:45:22.067+1300 I COMMANDS [initandlisten] dbexit:  rc: 100
+2019-10-18T18:49:49.219+1300 I -        ***** SERVER RESTARTED *****
+2019-10-18T18:49:49.226+1300 I -        [initandlisten] MongoDB starting : pid=1940 port=27017 dbpath=/Users/tgzhsz/mongodb/data/db 64-bit host=Joshs-MacBook-Pro.local
+2019-10-18T18:49:49.227+1300 I -        [initandlisten] 
+2019-10-18T18:49:49.228+1300 I -        [initandlisten] ** NOTE: This is a development version (2.7.8) of MongoDB.
+2019-10-18T18:49:49.229+1300 I -        [initandlisten] **       Not recommended for production.
+2019-10-18T18:49:49.230+1300 I -        [initandlisten] 
+2019-10-18T18:49:49.231+1300 I -        [initandlisten] 
+2019-10-18T18:49:49.232+1300 I -        [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2019-10-18T18:49:49.233+1300 I -        [initandlisten] db version v2.7.8
+2019-10-18T18:49:49.234+1300 I -        [initandlisten] git version: 0e9cb3b20498b9f167afaff7a5c4a4d1da7e06a2
+2019-10-18T18:49:49.235+1300 I -        [initandlisten] build info: Darwin mci-osx108-8.build.10gen.cc 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2019-10-18T18:49:49.235+1300 I -        [initandlisten] allocator: system
+2019-10-18T18:49:49.236+1300 I -        [initandlisten] options: { config: "mongo.cfg", processManagement: { fork: true }, storage: { dbPath: "/Users/tgzhsz/mongodb/data/db", directoryPerDB: true, journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Users/tgzhsz/mongodb/data/log/mongo.log" } }
+2019-10-18T18:49:49.237+1300 I JOURNAL  [initandlisten] journal dir=/Users/tgzhsz/mongodb/data/db/journal
+2019-10-18T18:49:49.238+1300 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2019-10-18T18:49:49.258+1300 I INDEXING [initandlisten] allocating new ns file /Users/tgzhsz/mongodb/data/db/local/local.ns, filling with zeroes...
+2019-10-18T18:49:49.284+1300 I STORAGE  [FileAllocator] allocating new datafile /Users/tgzhsz/mongodb/data/db/local/local.0, filling with zeroes...
+2019-10-18T18:49:49.284+1300 I STORAGE  [FileAllocator] creating directory /Users/tgzhsz/mongodb/data/db/local/_tmp
+2019-10-18T18:49:49.286+1300 I STORAGE  [FileAllocator] done allocating datafile /Users/tgzhsz/mongodb/data/db/local/local.0, size: 64MB,  took 0 secs
+2019-10-18T18:49:49.289+1300 I NETWORK  [initandlisten] waiting for connections on port 27017
+2019-10-18T18:49:55.485+1300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50270 #1 (1 connection now open)
+2019-10-18T18:58:31.278+1300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50298 #2 (2 connections now open)
+2019-10-18T18:58:31.294+1300 I INDEXING [conn2] allocating new ns file /Users/tgzhsz/mongodb/data/db/SERLER/SERLER.ns, filling with zeroes...
+2019-10-18T18:58:31.321+1300 I STORAGE  [FileAllocator] allocating new datafile /Users/tgzhsz/mongodb/data/db/SERLER/SERLER.0, filling with zeroes...
+2019-10-18T18:58:31.322+1300 I STORAGE  [FileAllocator] creating directory /Users/tgzhsz/mongodb/data/db/SERLER/_tmp
+2019-10-18T18:58:31.323+1300 I STORAGE  [FileAllocator] done allocating datafile /Users/tgzhsz/mongodb/data/db/SERLER/SERLER.0, size: 64MB,  took 0 secs
+2019-10-18T18:58:31.326+1300 I INDEXING [conn2] build index on: SERLER.users properties: { v: 1, unique: true, key: { email: 1 }, name: "email_1", ns: "SERLER.users", background: true }
+2019-10-18T18:58:31.327+1300 I INDEXING [conn2] build index done.  scanned 0 total records. 0 secs
+2019-10-18T19:03:22.504+1300 I NETWORK  [conn2] end connection 127.0.0.1:50298 (1 connection now open)
+2019-10-18T19:03:23.431+1300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50332 #3 (2 connections now open)
+2019-10-18T19:10:05.889+1300 I NETWORK  [conn3] end connection 127.0.0.1:50332 (1 connection now open)
+2019-10-18T19:10:06.561+1300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50385 #4 (2 connections now open)
+2019-10-18T19:10:12.610+1300 I NETWORK  [conn4] end connection 127.0.0.1:50385 (1 connection now open)
+2019-10-18T19:12:11.435+1300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50405 #5 (2 connections now open)
+2019-10-18T19:14:02.029+1300 I NETWORK  [conn5] end connection 127.0.0.1:50405 (1 connection now open)
+2019-10-18T19:14:02.700+1300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50426 #6 (2 connections now open)
+2019-10-18T19:15:08.523+1300 I NETWORK  [conn6] end connection 127.0.0.1:50426 (1 connection now open)
+2019-10-18T19:15:09.238+1300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50437 #7 (2 connections now open)
+2019-10-18T19:15:40.214+1300 I NETWORK  [conn7] end connection 127.0.0.1:50437 (1 connection now open)
+2019-10-18T19:15:40.946+1300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50445 #8 (2 connections now open)
+2019-10-18T19:18:53.315+1300 I NETWORK  [conn8] end connection 127.0.0.1:50445 (1 connection now open)
+2019-10-18T19:18:54.024+1300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50465 #9 (2 connections now open)
+2019-10-18T19:21:53.310+1300 I NETWORK  [conn9] end connection 127.0.0.1:50465 (1 connection now open)
+2019-10-18T19:21:54.037+1300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50498 #10 (2 connections now open)
+2019-10-18T19:22:36.506+1300 I NETWORK  [conn10] end connection 127.0.0.1:50498 (1 connection now open)
+2019-10-18T19:22:37.297+1300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50509 #11 (2 connections now open)
+2019-10-18T19:23:15.202+1300 I NETWORK  [conn11] end connection 127.0.0.1:50509 (1 connection now open)
+2019-10-18T19:23:15.929+1300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50514 #12 (2 connections now open)
+2019-10-18T19:28:18.563+1300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50602 #13 (3 connections now open)
+2019-10-18T19:39:59.939+1300 I NETWORK  [conn1] end connection 127.0.0.1:50270 (2 connections now open)
